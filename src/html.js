@@ -1,4 +1,6 @@
 import React from "react";
+import GoogleTagManager from "./components/GoogleTagManager";
+
 import PropTypes from "prop-types";
 
 export default function HTML(props) {
@@ -12,6 +14,7 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         {props.headComponents}
+        <GoogleTagManager />
       </head>
       <body {...props.bodyAttributes}>
         <script dangerouslySetInnerHTML={{
