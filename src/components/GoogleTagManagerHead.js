@@ -1,6 +1,6 @@
 import React from "react";
 
-const GoogleTagManager = () => {
+const GoogleTagManagerHead = () => {
   return (
     <>
       <script
@@ -16,4 +16,4 @@ const GoogleTagManager = () => {
   );
 };
 
-export default GoogleTagManager;
+export default GoogleTagManagerHead;
