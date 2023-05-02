@@ -1,5 +1,6 @@
 import React from "react";
-import GoogleTagManager from "./components/GoogleTagManager";
+import GoogleTagManagerHead from "./components/GoogleTagManagerHead";
+import GoogleTagManagerBody from "./components/GoogleTagManagerBody";
 
 import PropTypes from "prop-types";
 
@@ -7,6 +8,7 @@ export default function HTML(props) {
   return (
     <html lang="en" {...props.htmlAttributes}>
       <head>
+        <GoogleTagManagerHead />
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta
@@ -14,9 +16,9 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         {props.headComponents}
-        <GoogleTagManager />
       </head>
       <body {...props.bodyAttributes}>
+        <GoogleTagManagerBody />
         <script dangerouslySetInnerHTML={{
           __html:
             `(function() {
