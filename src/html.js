@@ -1,4 +1,6 @@
 import React from "react";
+import GoogleTagManager from "./components/GoogleTagManager";
+
 import PropTypes from "prop-types";
 
 export default function HTML(props) {
@@ -21,6 +23,7 @@ export default function HTML(props) {
           href="https://fonts.googleapis.com/css?family=Open%20Sans:300,400,500,600,700,800&display=swap"
           media="print" onLoad="this.media='all'" />
         {props.headComponents}
+        <GoogleTagManager />
       </head>
       <body {...props.bodyAttributes}>
         <script dangerouslySetInnerHTML={{
