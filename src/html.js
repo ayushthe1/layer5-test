@@ -15,11 +15,6 @@ export default function HTML(props) {
   return (
     <html lang="en" {...props.htmlAttributes}>
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: gtmScript,
-          }}
-        />
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta
@@ -38,12 +33,6 @@ export default function HTML(props) {
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
-        <noscript
-          dangerouslySetInnerHTML={{
-            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W92XDVZ"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
-          }}
-        />
         <script dangerouslySetInnerHTML={{
           __html:
             `(function() {
