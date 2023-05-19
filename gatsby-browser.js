@@ -28,7 +28,7 @@ const addGTMToBody = () => {
 export const onInitialClientRender = () => {
   addGTMToHead();
   addGTMToBody();
-}
+};
 
 export { wrapRootElement } from "./root-wrapper";
 export { wrapPageElement } from "./page-wrapper";
