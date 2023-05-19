@@ -1,10 +1,6 @@
 import "./fonts.css";
 
 const addGTMToHead = () => {
-  if (window.gtmDidInit) {
-    return false;
-  }
-  window.gtmDidInit = true;
   const script = document.createElement("script");
   script.innerHTML = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -29,10 +25,11 @@ const addGTMToBody = () => {
   document.body.insertBefore(noscript, document.body.firstChild);
 };
 
-document.addEventListener("DOMContentLoaded", () => {
+export const onInitialClientRender = () => {
   addGTMToHead();
   addGTMToBody();
-});
+}
 
 export { wrapRootElement } from "./root-wrapper";
 export { wrapPageElement } from "./page-wrapper";
+
